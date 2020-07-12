@@ -1,0 +1,14 @@
+[Unit]
+Description=MQTT MicroView Loop
+After=network.target
+
+[Service]
+ExecStart=venv/bin/python -u micro_loop.py
+WorkingDirectory=/home/pi/mqttloops
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

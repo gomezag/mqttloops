@@ -1,0 +1,14 @@
+[Unit]
+Description=MQTT HVAC Loop
+After=network.target
+
+[Service]
+ExecStart=venv/bin/python -u mqttloops/hvac_loop.py
+WorkingDirectory=/home/pi/mqttloops
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
