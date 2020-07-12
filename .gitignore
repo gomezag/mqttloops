@@ -1,2 +1,4 @@
 venv
 mqttroutines/.env
+__pycache__
+servicefiles
